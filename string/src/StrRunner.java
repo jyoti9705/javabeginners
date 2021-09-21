@@ -56,8 +56,25 @@ public class StrRunner {
         System.out.println(anotherString.toLowerCase());
 
         String removeSpaces = "  Space  ";
-        //Removes spaces in start and end of word
+        //Removes space from start and end of word
         System.out.println(removeSpaces.trim());
+
+        //Fun Fact
+        String abc = 1 + 2+ "3";
+        System.out.println(abc);
+        //Output : 33
+
+        String abc1 = "1"+2+3;
+        System.out.println(abc1);
+        //Output : 123
+        //In string operation goes from left to right , so for first abc it adds 1 and 2 and concatenates 3 to it , and in second abc1 it starts with String ,so it concatenates rest all displaying 123
+
+        String joinExample = String.join(",", "Jyoti", "Singh");
+        System.out.println(joinExample);
+        //Output : Jyoti,Singh
+        // first variable is java delimiter using which we want to join , rest are the elements that are joined using delimiter
+
+
 
 
 
