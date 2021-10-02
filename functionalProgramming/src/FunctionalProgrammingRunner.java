@@ -23,6 +23,17 @@ public class FunctionalProgrammingRunner {
         System.out.println("======================Arraylist to Array====================================================");
         Arrays.stream(names.stream().toArray()).forEach(System.out::println);
 
+        List<Integer> numlist = new ArrayList<>();
+        numlist.add(20);
+        numlist.add(30);
+        numlist.add(50);
+
+        System.out.println("======================Collecting sums of numbes in a list===================================");
+        int sum = numlist.stream().reduce(0, (number1, number2) -> number1 + number2);
+        System.out.println(sum);
+
+        //
+
 
     }
 }
