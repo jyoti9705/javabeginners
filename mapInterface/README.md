@@ -14,6 +14,9 @@ Implementations of Map
     3. UnSorted And UnOrdered
     4. Hashing techniques are used
     5. We cannot store key with null Value
+    6. We cannot store value with null value
+    7. Why? because the objects used in Hashtable should be able to implement hashcode since null is not an object it cannot implement hashcode and hence values cannot be null
+
 
 3. Linked Hash Map
     1. Insertion order is maintained

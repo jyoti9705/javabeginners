@@ -1,4 +1,4 @@
-1. Finally is executed is all cases
+1. Finally is executed in all cases
     1. if return is present in try block then too it will trigger finally
     2. In case of exceptions it is executed
     3. The only case where finally is not executed is when we call system.exit , which we should not call as it will

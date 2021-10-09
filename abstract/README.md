@@ -11,6 +11,7 @@ Difference between Abstract and Interface
 
 1. Benefit using interface is that you can create instance of interface class and make use of methods that are used by
    two diff class which have implemented interface
+2. Interface can implement multiple inheritance but Abstract class cannot
 
 Interface
 
