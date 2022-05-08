@@ -1,16 +1,16 @@
-1. Finally, is executed in all cases
+1. Finally is executed in all cases
     1. if return is present in try block then too it will trigger finally
     2. In case of exceptions it is executed
     3. The only case where finally is not executed is when we call system. exit , which we should not call as it will
        kill all java process
-2. there care be various combinations of try , catch , finally
+2. there can be various combinations of try , catch , finally
     1. Try with Catch Block will compile the code
     2. Try with finally block will also compile the code
     3. Just try block and no catch and finally will cause compilation error
 3. Certain Exceptions are forced to handle , they are known as Checked Exceptions
 4. Exception which are not forced to handle are called UnChecked Exceptions
 5. Hierarchy of Exceptions
-    1. Super Class of Everything related to exception in throwable
+    1. Super Class of Everything related to exception is throwable
     2. Error and Exceptions extends Throwable
     3. Anything which is not a Runtime Exception , not a subclass of Runtime Exception , but is Subclass of Exceptions
        is called Checked Exceptions
