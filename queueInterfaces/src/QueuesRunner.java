@@ -16,7 +16,7 @@ public class QueuesRunner {
         //We can insert multiple elements in Queue using addAll function
         queuesString.addAll(List.of("Zebra", "Cat", "Dog"));
         queuesString.stream().forEach(System.out::println);
-        //Once you do poll on queue the frist element will be displayed and moved out of queue
+        //Once you do poll on queue the first element will be displayed and moved out of queue
         System.out.println("=================Polling queue for first time=========================");
         System.out.println(queuesString.poll());
         System.out.println("=================Polling completed , Printing Queue again=============");

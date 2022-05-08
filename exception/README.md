@@ -1,8 +1,8 @@
-1. Finally is executed in all cases
+1. Finally, is executed in all cases
     1. if return is present in try block then too it will trigger finally
     2. In case of exceptions it is executed
-    3. The only case where finally is not executed is when we call system.exit , which we should not call as it will
-       kiss all java process
+    3. The only case where finally is not executed is when we call system. exit , which we should not call as it will
+       kill all java process
 2. there care be various combinations of try , catch , finally
     1. Try with Catch Block will compile the code
     2. Try with finally block will also compile the code

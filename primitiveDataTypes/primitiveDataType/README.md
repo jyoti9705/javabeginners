@@ -19,7 +19,7 @@ Character
     
 
 
-1. We cannot store long value to int i.e large values cannot be stored into smaller onces , however vice versa can be done
+1. We cannot store long value to int i.e. large values cannot be stored into smaller ones , however vice versa can be done
 2. If we still want to do it , we can do explicit cast by doing i = (int)l
 3. We cannot assign double to float, lossy conversion
 4. We cannot assign float value to integer
@@ -34,7 +34,6 @@ Character
 13. ^ is true when both the operands are not same , one should be true and other should be false
 14. && is shortcircuit operator which means out of two conditions even if first one is false it will not check for another condition
 15. & checks both the condition even if 1st one is false
-16. 
 
 
 PreIncrement

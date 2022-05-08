@@ -15,7 +15,7 @@
     object
 13. Inside static method we cannot access non-static variables , in non-static method we can access static variables
 14. public static final - Constants
-15. class inside a another class is called Nested Class
+15. class inside another class is called Nested Class
     1. Non-static nested class are called inner class
         1. Instance of inner class cannot be created without creating instance of main class
     2. Methods with static modifier is called static nested class

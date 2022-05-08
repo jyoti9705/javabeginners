@@ -1,13 +1,13 @@
 1. Java 9 included modularization of Java
 2. Application should be built modularized
 3. Module-info.java has various keywords
-    1. exports : If you want a particular package to be exposed to other module , we cna make use of exports
+    1. exports : If you want a particular package to be exposed to other module , we can make use of exports
     2. requires : If you want a particular module in your module you can make use of transition and add that module to
        your current project module path
     3. requires transition : Not only project which is using this module will be able to access that import , but also
-       other projects which will be importing current module will be able to access package specified uwith requires
+       other projects which will be importing current module will be able to access package specified with requires
        transition keyword
-    4. opens package.a to module.a : exposes only a particular package to other module before Java 9
+    4. opens package.a to module.a : exposes only a particular package t o other module before Java 9
 4. Advantages of Modularisation
     1. Compile time checks
     2. Better Encapsulation

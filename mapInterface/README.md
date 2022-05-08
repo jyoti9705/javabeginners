@@ -1,5 +1,5 @@
-1. Map does not implements collection Interface , Although it is part of Collections
-2. It included methods related to keys and values
+1. Map does not implement collection Interface , Although it is part of Collections
+2. It included methods related to key and values
 
 Implementations of Map
 
