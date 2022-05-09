@@ -174,3 +174,69 @@
         1. gc is defined in System and Runtime class, it is used to invoke garbage collector to perform cleanup
            processing
     8. Nether finalization nor garbage collection is guaranteed
+7. Relationship between classes
+    1. Inheritance(IS-A)
+        1. Inheritance is achieved by using extends keyword
+        2. Inheritance will inherit all the properties from one class into another i.e. from parent class to child class
+        3. When child class extends the parent class IS-A Relationship is built between them
+        4. When inheritance is implemented both the classes are tightly coupled which means if we change anything in any
+           class it will affect the other class
+        5. Inheritance shares blood relationship between the classes
+        6. Hence, they are tightly coupled
+        7. Inheritance is from bottom to top
+    2. Association(HAS-A)
+        1. Association can be seen in model files the class has HAS-A relationship with the attributes in it,
+           Association can also be implemented by creating object of one class into another
+        2. Association is not a blood relationship , change in one class will not affect the other class that much
+        3. Association has aggregation and aggregation has composition
+        4. Classes in Association are not tightly coupled
+        5. Association is from top to bottom
+        6. Aggregation has weak bonding and composition has strong bonding
+            1. Aggregation
+                1. Weak Bonding between the classes
+            2. Composition
+                1. Strong Bonding between the classes
+    3. Why relationship build is required
+        1. Code Usability
+        2. Cost-cutting
+        3. Reduce redundancy
+8. Abstraction
+    1. Abstraction means hiding the implementation details from outer world
+    2. Encapsulation is hiding the data details from outer world
+    3. In Abstraction, we expose only certain services to the outer world for use and hide the rest of the
+       implementations
+    4. Abstraction can be achieved with abstract classes or interfaces
+        1. With Abstract classes we can achieve 0 to 100% abstraction
+        2. With Interface, we can achieve 100% abstraction
+    5. If a class has abstract method then it will be abstract class , however if the class is abstract class it need
+       not have abstract methods
+    6. Abstract methods have no implementations
+    7. If the regular class implements abstract class then it becomes compulsory for it to implement non-abstract
+       methods
+    8. Abstract class object can never be created because we do not want to call methods with no implementation
+    9. Interface
+        1. Before Java8 we only had abstract methods in Interfaces , that is methods with no implementations
+        2. Interface is used to achieve abstraction
+        3. Interface supports multiple inheritance
+        4. It can be used to achieve loose coupling
+        5. Interface has all methods public abstract
+        6. Any fields created inside interface is public static final by default
+        7. from java 8 we can create default concrete methods and static methods in interfaces
+        8. By Default access modifier for static methods is public
+        9. From Java 9 we can also create private methods in Java
+        10. Any class implementing interface should implement all the abstract methods i.e. by method overriding
+        11. We cannot create object for interfaces
+        12. Interface is blueprint for class
+        13. We can also specify abstract methods in interfaces
+        14. public methods with no default and static keyword cannot be implemented in Interface
+    10. Difference between Abstract and Interfaces
+        1. Abstract classes can have public concrete methods but interfaces have no public concrete methods with
+           implementations
+        2. Abstract classes can have non-final variables but by default all variables in interfaces are public static
+           final
+        3. Methods and variables can have access modifiers public, private , protected , default in abstract whereas in
+           interface it can be public . default and static
+        4. Java abstract class are extended using extend keyword vs Interfaces are implemented using implements keyword
+        5. An abstract class can extend another java class and implement Interfaces vs Interface can only extend other
+           Java Interface
+        6. 
