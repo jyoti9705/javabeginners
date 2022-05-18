@@ -229,6 +229,7 @@
         12. Interface is blueprint for class
         13. We can also specify abstract methods in interfaces
         14. public methods with no default and static keyword cannot be implemented in Interface
+        15. Interface can extend any no of interfaces
     10. Difference between Abstract and Interfaces
         1. Abstract classes can have public concrete methods but interfaces have no public concrete methods with
            implementations
@@ -239,4 +240,142 @@
         4. Java abstract class are extended using extend keyword vs Interfaces are implemented using implements keyword
         5. An abstract class can extend another java class and implement Interfaces vs Interface can only extend other
            Java Interface
-        6. 
+9. How Hashmap works internally
+    1. Hashmap stores values in form of key value pair
+    2. Also point to remember is that key in Hashmap are unique
+    3. Also, all the operation in Map like insert,search,delete are performed as O(1)
+    4. In hashmap values are not stored in continuous manner , instead it is stored in any order this is because hashing
+       is used in Hashmap
+    5. Hashing
+        1. Uses hash function , hash function generates same output for same input
+        2. Hash functions maps larger values into smaller values
+        3. Should be O(1) or O(len) for String
+        4. Should uniformly distribute large keys into hash table slots
+        5. Eg
+            1. For Large Integer keys = key%m
+            2. For String = weighted sum
+            3. For Objects = weighted sum of elements
+        6. HashTable is nothing but array of nodes
+        7. to insert values in hashtable we divide the sum or key by length of the node and then the reminder is the
+           place where values are stored if 2 values have same remainder then it is stores in form of linkedlist
+        8. To get values from HashTable we find hash of the key and then check of the key is matching if not we move to
+           another node in the list
+        9. After Java8 a threshold was introduced i.e if the linked list chain cross a threshold of 8 we convert it into
+           self-balancing binary search tree which is of log(len) complexity
+
+10. Problems with Array
+    1. We can not increase or decrease the size of the array
+    2. Arrays are Homogenous
+    3. Arrays concept are not implemented based on standard data structure hence predefined method supports are not
+       availble
+11. Because of above limitations e switch to Collections
+    1. Collections can hold both homogenous and heterogeneous objects
+    2. Collections are growable in nature
+    3. Collections are developed based on some standard data structures
+        1. Ready-made method support we can expect
+12. Differences between Arrays and Collections
+    1. Arrays are fixed in size whereas Collections are growable in nature
+    2. w.r.t to memory Arrays are not recommended whereas Collections are recommended
+    3. Performance wise Arrays are recommended and Collections are not
+    4. Arrays can hold only homogenous data elements whereas collections can hold both homogenous and heterogeneous data
+       elements
+    5. Underlying datastructures is not available in Array hence readme method support is not available in Array whereas
+       in Collections in underlying data structures are available hence ready-made methods are available
+    6. Arrays can store both object and primitive and Collections can only store object.
+13. Collections
+    1. Group of individual objects represented in form of single entity
+    2. Collection Framework
+        1. Collection Framework defines list of classes and interfaces required to represent group of individual objects
+           as a single entity
+    3. Key Interfaces of Java Collection
+        1. Collection
+            1. Collection Interface has list of common methods that are used or available for almost all the collection
+               interface
+            2. Collection Interface is root interface of Java Collection
+            3. If we want to represent group of individual objects as a single entity we should go for collection
+            4. Difference between Collection and Collections
+                1. Collection is an Interface whereas Collections is a utility class we define several utility methods
+                   for collections like sorting searching etc. for collections
+        2. List
+            1. If we want to store group of individual objects as a single entity we should go for collection , now if
+               in this collection we want to preserve insertion order and duplicates are allowed that we should go for
+               list.
+            2. List Interface is a child interface for collection
+            3. Implementation classes for list are
+                1. Arraylist 1.2
+                2. LinkedList 1.2
+                3. Vector 1.o
+                    1. Implementation of Vector is Stack
+                    2. Vector and Stack are present since 1.0 hence they are called as legacy classes
+                    3. Vector and Stack were reengineered in 1.2 to implement list
+        3. Set
+            1. If we want to store group of individual objects as a single entity in which it is fine with me if
+               insertion order is not maintained, but we do not want duplicates then we should go for set
+            2. Set is a child interface for collection
+            3. Implementations for Set are
+                1. HashSet 1.2
+                2. LinkedHashset 1.4
+            4. Difference between List and Set
+                1. Duplicates are allowed in List , whereas in Set duplicates are not allowed
+                2. Insertion Order is preserved in List but in Set Insertion order is not preserved
+        4. SortedSet 1.2
+            1. if we want to store group of individual objects in a form that duplicates should not be present but some
+               order should be maintained then we should go for Sorted Set
+            2. SortedSet is a child interface for Set
+        5. Navigable Set 1.6
+            1. Navigable set is child interface for Sorted set added for navigation purposes
+            2. TreeSet 1.2 is implementation for Navigable Set
+        6. Queue
+            1. Queue is child Interface for Collection
+            2. If we want store Group of Objects prior to processing then we should go for Queue Interface
+            3. Implementation of Queue Interface
+                1. Priority Queue
+                2. Blocking Queue
+                    1. Child classes of Blocking Queue are
+                        1. LinkedBlockingQueue
+                        2. PriorityBlockingQueue
+            4. Whole queue concept was introduced in 1.5version
+        7. Map
+            1. If we want to store group of objects as form of Key and Value Pair then we should go for Map
+            2. Map is not a child interface of Collection , or collection is not a root interface for collection
+            3. Duplicate keys are not allowed in Map but Values can be duplicate
+            4. Hashmap allows one null key and multiple null values , whereas Hashtable allows no null key or value
+            5. Implementations of HashMap are
+                1. HashMap 1.2
+                    1. LinkedHashMap 1.2 is child class for HashMap
+                2. WeakHashMap 1.2
+                3. IdentityHashMap 1.4
+                4. Hashtable 1.0
+                    1. Properties is child class for HashTable , Hashtable implements Map interface and extends
+                       Dictionary Class
+                    2. Hashtable , Dictionary and Properties were introduced in Java 1.0 hence they are called as legacy
+                       classes
+        8. SortedMap
+            1. SortedMap is a child interface for Map
+            2. If we want to store key and value pairs according to some order of keys then we should go for SortedMap
+        9. Navigable Map
+            1. Navigable Map is child interface for Sorted Map
+            2. Implementation of Navigable map is TreeMap
+            3. It defines utility methods for navigation purpose
+    4. Overview of Collection Framework
+        1. List - Duplicates allowed and insertion order preserved
+        2. Set - Insertion order not maintained and duplicates are not allowed
+        3. SortedSet - All objects to be inserted without duplicates according to some sorted order
+        4. Navigation Set- If we want to navigate the list
+        5. Queue - Before processing if we want to represent group of individual objects
+        6. Map - Represent group of objects as key and Value Pairs
+            1. In Collection First Half represent storing single objects , Next half stores key and value pairs which is
+               Map
+            2. Map is not a child interface for Collections
+        7. SortedMap - Group of objects are stored in key and value pairs according to some sorting order of key
+        8. Navigable Map - if we want navigation support for sorted map
+        9. Collection - Root Interface for all collection Interfaces leaving Map
+    5. If we want default sorting we should go for Comparable Interface , if we want customised sorting then we should
+       go for Comparator Interface
+    6. To get objects one by one from the Collection Framework there are 3 cursors present
+        1. Enumeration
+        2. Iterator
+        3. List Iterator
+    7. Utility Classes
+        1. Collections utility methods for collection
+        2. Arrays utility methods for Array
