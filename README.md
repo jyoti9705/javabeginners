@@ -240,6 +240,13 @@
         4. Java abstract class are extended using extend keyword vs Interfaces are implemented using implements keyword
         5. An abstract class can extend another java class and implement Interfaces vs Interface can only extend other
            Java Interface
+        6. Abstract class can implement methods from Interface but Interface cannot implement abstract methods
+        7. Members of abstract class can have any access modifier whereas Members of Interface can only have public
+           access modifier
+        8. Abstract keyword is used to declare abstract class , Interface keyword is used to declare interface class
+        9. Abstract class can be extended using keyword extends and interface can be implemented using keyword
+           implements
+        10. Abstract class does not support multiple inheritance , Interface supports multiple inheritance
 9. How Hashmap works internally
     1. Hashmap stores values in form of key value pair
     2. Also point to remember is that key in Hashmap are unique
@@ -267,7 +274,7 @@
     1. We can not increase or decrease the size of the array
     2. Arrays are Homogenous
     3. Arrays concept are not implemented based on standard data structure hence predefined method supports are not
-       availble
+       available
 11. Because of above limitations e switch to Collections
     1. Collections can hold both homogenous and heterogeneous objects
     2. Collections are growable in nature
@@ -282,7 +289,47 @@
     5. Underlying datastructures is not available in Array hence readme method support is not available in Array whereas
        in Collections in underlying data structures are available hence ready-made methods are available
     6. Arrays can store both object and primitive and Collections can only store object.
-13. Collections
+13. Marker Interface in Java
+    1. Marker Interface contains no methods specifications or declarations,
+    2. Implementation for market interface or any methods from market interface are provided from Sun Microsytems itself
+    3. Advantages of Marker Interface
+        1. No need to write implementations multiple times , we need to just intimate JVM that we are making use of
+           Marker Interface by implementing the Marker Interface
+    4. Implementations of the marker interface is provided by the Object , on its own it is empty interface
+    5. They do not have any abstract methods
+    6. They are empty
+14. What are different ways to create object?
+    1. By using new keyword
+    2. Using newInstance() method in java.lang.package in class Class
+        1. We need to first load the class with help of Class.forName("Name of Class");
+        2. We can also load class with ClassName.class method
+        3. Typecast the instance to Student class
+        4. New Instance method makes use of Default constructor of class to create object
+    3. By using constructor newInstance method
+        1. Difference between class and constructor new instance method
+            1. Constructor new Instance method is present in java.lang.reflect package whereas Class new instance method
+               is present in java.lang.class method
+            2. Constructor new Instance method can invoke any constructor be it parameterized or default constructor but
+               Class new Instance method can only invoke no parameterized constructors or no args default constructor
+            3. Constructor new Instance method can invoke both private and public constructors but Class new Instance
+               method can invoke only public constructors
+            4. Constructor new Instance method wraps up all the exception and throws invocation target exception whereas
+               Class new Instance method throws all the exception thrown by constructor
+        2. Constructor.newInstance method is widely used for object creation by multiple frameworks
+        3. We need to load the class with ClassName.class.getConstructor() into a constructor object
+        4. We can then call the getInstance() method inside constructor
+    4. Using clone
+        1. When we make use of clone() method it will create same class with all properties same as of the class we are
+           trying to replicate
+        2. But the replicated class will have separate method references and memory address
+        3. Copying properties of one class to another class is called object cloning
+        4. We need to implement the Cloneable Marker Interface and then override the clone method to clone new object
+        5. Constructor is not getting called over here
+    5. Using Deserialization
+        1. We will have to implement the Serializable marker Interface
+        2. Use readObject() method inside serialization
+        3. Also, constructor is not called in this type of object creation
+16. Collections
     1. Group of individual objects represented in form of single entity
     2. Collection Framework
         1. Collection Framework defines list of classes and interfaces required to represent group of individual objects
