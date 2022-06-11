@@ -329,7 +329,7 @@
         1. We will have to implement the Serializable marker Interface
         2. Use readObject() method inside serialization
         3. Also, constructor is not called in this type of object creation
-16. Collections
+15. Collections
     1. Group of individual objects represented in form of single entity
     2. Collection Framework
         1. Collection Framework defines list of classes and interfaces required to represent group of individual objects
@@ -426,3 +426,38 @@
     7. Utility Classes
         1. Collections utility methods for collection
         2. Arrays utility methods for Array
+16. String memory allocation
+    1. If I create 2 Strings in Java with new Keyword having same value in it like
+        1. String a = new String("Java");
+        2. String b = new String("Java");
+        3. Java will first check in Java String Constant Pool if the value "Java" is present ,if present in pool it will
+           create not create another object in Constant Pool because Java constant pool can strictly not have duplicates
+           in it , if it is not present it will create new object inside constant pool
+        4. Now since this String is created with new keyword , it is created at runtime because objects are created in
+           runtime and stored in Heap , because the object is created at runtime it will also create new object in Heap
+        5. Now if we try to create another String with same content it will find that string constant pool already has
+           the content, so it will not create new content again in constant pool , however it will still create object
+           inside heap memory because heap has no such restriction for duplicate objects
+        6. Also, a point to remember over here is that the reference that it will point to is the object inside heap
+           variable
+        7. Now what should happen if I create 2 String with same contents using double quotes
+            1. String a = "Java"
+            2. String b = "Java"
+            3. As java constant pool cannot have duplicates , at first the content will be added to the constant pool
+               and then both the object will be given same reference
+            4. Also, as this is not getting created with new keyword it will not be created in the Heap memory
+17. What is Serialization?
+    1. The process of converting file from Java supported form to network supported form is called Serialization
+    2. The process of converting the object from Java Supported form to network/file supported form is called
+       Serialization
+        1. The process of saving state of an object to a file is called Serialization
+    3. How can we implement Serialization?
+        1. File output stream and object output stream we can implement Serialization
+        2. OOS take the object and converts that object into binary data , File Output Stream will store that binary
+           data into the file
+18. What is Deserialization
+    1. The process of converting file from Network supported form to Java Supported form is called Deserialization
+    2. The process of reading state of an object from the file is called deserialization
+    3. How to implement Deserialization
+        1. To read binary data we will need FieInputStream and ObjectInputStream will convert binary data back to Object
+
